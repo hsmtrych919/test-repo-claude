@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* style.cssの画面です */
+
+/*ページ全体をまとめているボックス*/
+.outer{
+    background-color: #fff;
+    padding-bottom: 250px;
+}
+
+
+
+/* 実践01 */
+.matome01{
+    width: 800px;
+}
+.left01{
+    width: 400px;
+}
+.right01{
+    width: 368px;
+}
+
+
+
+/* 実践02 */
+.cnt{
+    width: 800px;
+}
+.cnt-left{
+    width: 300px;
+}
+.cnt-right{
+    width: 450px;
+}
+
+
+
+
+/* etc */
+.space{
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    background-color: #ccc;
+    margin-bottom: 200px;
+    opacity: 0;
+}

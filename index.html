@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- index.htmlの画面です -->
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>cmp | WD2G</title>
+<link href="css/framework.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="outer">
+<!-- デザイン開始 -->
+
+<div class="space anime">03-20 スクロール確保の余白</div>
+
+<div class="title-line">実践01 : 横並びの左側だけフェードイン</div>
+<!-- 実践01 サンプルコード -->
+<div class="matome01 box-center flex">
+  <div class="left01 anime"><img src="img/pic01.jpg" alt="写真01"></div>
+  <div class="right01"><img src="img/typ01.png" alt="文字01"></div>
+</div>
+
+
+<div class="title-line">実践02 : 2箇所目のフェードインを追加</div>
+<!-- 実践02 サンプルコード -->
+<div class="cnt box-center flex">
+  <div class="cnt-left"><img src="img/typ02.png" alt="文字02"></div>
+  <div class="cnt-right anime"><img src="img/pic02.jpg" alt="写真02"></div>
+</div>
+
+
+
+
+<!-- デザイン終了 -->
+
+<script src="js/scroll.js"></script>
+<script>
+  inview('left01','fadein-left',300);
+  inview('cnt-right','fadein-right',300);
+  fromtop('space','fadein-up',100);
+</script>
+
+</body>
+</html>

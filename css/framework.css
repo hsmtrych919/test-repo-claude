@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*------ 初期設定 Ver.1.3 変更しない -----*/
+body {
+  margin:0;
+  padding:0;
+  font-family:Avenir,'游ゴシック体',YuGothic,'游ゴシック Medium','Yu Gothic Medium','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+  color:#222;
+  font-size:18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border:0;
+  vertical-align: top;
+  backface-visibility:hidden;
+}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,th,td {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+iframe {
+  vertical-align: bottom;
+}
+/*ライブラリ*/
+.font-min {
+  font-family:'Times New Roman','游明朝体',YuMincho,'游明朝','Yu Mincho','ヒラギノ明朝 ProN W3','Hiragino Mincho ProN','HGS明朝E','ＭＳ Ｐ明朝','MS PMincho',serif;
+}
+.img-full,.img-full img {
+  width: 100%;
+}
+.ta-center {
+  text-align: center;
+}
+.ta-right {
+  text-align: right;
+}
+.box-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.pof-top{
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5000;
+}
+.pof-bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 5000;
+}
+/* bgi loop */
+.bgi-loop{
+  background-size: cover;
+  animation: bgi-loop 300s linear infinite;
+}
+@-webkit-keyframes bgi-loop {
+0% { background-position: 0 center; }
+100% { background-position: -10000px center; }
+}
+@keyframes bgi-loop {
+0% { background-position: 0 center; }
+100% { background-position: -10000px center; }
+}
+
+/* flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.flex-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content:space-between;
+}
+.flex-mid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-between;
+}
+.flex-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content:space-between;
+}
+.flex-left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+.flex-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+.flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+
+/* アニメーション */
+.fadein img,.fadein-up img,.fadein-down img,.fadein-left img,.fadein-right img{
+  backface-visibility:visible;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadein {
+  animation-name: fadeIn;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadein-up {
+  animation-name: fadeInUp;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadein-down {
+  animation-name: fadeInDown;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadein-left {
+  animation-name: fadeInLeft;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadein-right {
+  animation-name: fadeInRight;
+}
+.anime {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/*------ 初期設定 Ver.1.3 変更しない ここまで -----*/
+
+
+.title-line{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size:22px;
+  font-weight:bold;
+  padding: 10px 16px;
+  border-left: 12px solid #ff1d1d;
+}
+.title-bdb{
+  margin-top: 80px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}

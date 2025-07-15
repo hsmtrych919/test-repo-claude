@@ -115,3 +115,35 @@ function fromtop(target, className, offset){
   });
 }
 
+/**
+ * パララックススクロール効果
+ * @param {string} target - 対象要素のクラス名
+ * @param {number} speed - スクロール速度（0-1の値）
+ */
+function parallaxScroll(target, speed = 0.5) {
+  const element = document.querySelector(`.${target}`);
+  if (!element) return;
+
+  const updateParallax = () => {
+    const scrollTop = window.pageYOffset;
+    const yPos = scrollTop * speed;
+    element.style.transform = `translateY(${yPos}px)`;
+  };
+
+  // スクロールイベントにリスナーを追加（スロットリング付き）
+  let ticking = false;
+  const handleScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateParallax();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  // 初期位置を設定
+  updateParallax();
+}
+

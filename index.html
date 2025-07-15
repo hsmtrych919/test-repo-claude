@@ -30,6 +30,17 @@
   </div>
 </div>
 
+<div class="title-line">実践03 : パララックススクロール効果</div>
+<!-- 実践03 サンプルコード -->
+<div class="parallax-container">
+  <div class="parallax-bg " data-speed="0.5"></div>
+  <div class="parallax-content box-center">s
+    <div class="parallax-image ">
+      <img src="img/pic01.jpg" alt="パララックス画像">
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -40,6 +51,11 @@
   inview('left01','fadein-left',300);
   inview('cnt-right','fadein-right',300);
   fromtop('space','fadein-up',100);
+
+  // 実践03: パララックス効果
+  parallaxScroll('parallax-bg', 0.1);
+
+
 </script>
 
 </body>

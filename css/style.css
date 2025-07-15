@@ -4,8 +4,8 @@
 /*ページ全体をまとめているボックス*/
 .outer{
     background-color: #fff;
-    padding-bottom: 250px;
-
+    padding-bottom: 450px;
+}
 
 
 
@@ -48,6 +48,62 @@
 }
 
 
+
+
+/* 実践03 - パララックス効果 */
+.parallax-container {
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background: url('../img/parallax-bg.jpg') center/cover no-repeat;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.parallax-text {
+    flex: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.parallax-image {
+    flex: 0 0 60%;
+    text-align: center;
+    padding: 20px;
+}
+
+.parallax-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
 
 /* etc */

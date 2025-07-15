@@ -15,7 +15,6 @@ claude code 学習用のリポジトリとして再利用
   - framework.css … フレームワーク用スタイル
 - js/
   - scroll.js … スクロールエフェクト用JavaScript
-  - main.js … その他の機能用JavaScript
 - img/ … 画像ファイル
 
 ## 機能

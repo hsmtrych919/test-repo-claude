@@ -11,7 +11,8 @@
 
 /* 実践01 */
 .matome01{
-    width: 800px;
+    width: 1200px;
+    max-width: 100%;
 }
 .left01{
     width: 400px;
@@ -53,7 +54,7 @@
 /* 実践03 - パララックス効果 */
 .parallax-container {
     position: relative;
-    height: 800px;
+    height: 480px;
     overflow: hidden;
     margin: 50px 0;
 }

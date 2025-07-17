@@ -11,20 +11,16 @@
 
 /* 実践01 */
 .matome01{
-    width: 800px;
-}
-.left01{
-    width: 400px;
-}
-.right01{
-    width: 368px;
-}
-
-/* matome11 */
-.matome11{
     width: 1200px;
     max-width: 100%;
 }
+.left01{
+    width: 50%;
+}
+.right01{
+    width: 48%;
+}
+
 
 
 
@@ -66,7 +62,7 @@
 
 .parallax-bg {
     position: absolute;
-    top: -20%;
+    top: -40%;
     left: 0;
     width: 100%;
     height: 140%;

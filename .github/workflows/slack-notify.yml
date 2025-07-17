@@ -1,21 +1,20 @@
 name: Slack Notification
 
 on:
- issues:
-   types: [closed]
+  issue_comment:
+    types: [created]
 
 jobs:
- notify:
-   if: |
-     github.event.action == 'closed' && 
-     github.event.issue.state_reason == 'completed' &&
-     (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude'))
-   runs-on: ubuntu-latest
-   steps:
-     - name: Send Slack notification
-       uses: 8398a7/action-slack@v3
-       with:
-         status: success
-         text: "🎉 Claude作業完了！ ${{ github.event.issue.html_url }} で「Create PR」をクリックしてね"
-       env:
-         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+  notify:
+    if: |
+      contains(github.event.comment.body, 'Claude finished') &&
+      (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Slack notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: success
+          text: "🎉 Claude作業完了！ ${{ github.event.issue.html_url }} で「Create PR」をクリックしてね"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
